@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  gap: 40px;
+}
+
+.navigation {
+  display: flex;
+  gap: 40px;
+}
+
+.navigation a {
+  color: black;
+}
+/*# sourceMappingURL=Navigation.css.map */

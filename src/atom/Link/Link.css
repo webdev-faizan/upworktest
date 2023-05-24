@@ -1,0 +1,9 @@
+.link {
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.link:hover {
+  color: red;
+}/*# sourceMappingURL=Link.css.map */
