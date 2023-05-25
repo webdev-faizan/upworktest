@@ -1,27 +1,26 @@
 import React from "react";
 import Button from "../../atom/Button/Button";
 
+const ButtonTemplate = (args) => <Button {...args} />;
 export default {
-  title: "Button",
+  title: "Components/Button",
   component: Button,
+  argTypes: {
+    backgroundColor: {
+      control: "inline-radio",
+      options: ["red", "yellow"],
+    },
+    scale: {
+      control: "inline-radio",
+    },
+  },
 };
 
-export const Primary = (args) => <Button {...args} />;
+export const Primary = ButtonTemplate.bind({});
 Primary.args = {
   primary: true,
   label: "button",
+  size: "medium",
+  backgroundColor: "red",
   children: "Hello Storybook",
-  style: {
-    backgroundColor: "gray",
-    color: "white",
-    padding: "10px",
-    borderRadius: "5px",
-    width:"60px"
-  },
-};
-Primary.argTypes = {
-  background: {
-    control: "inline-radio",
-    options: ["red", "yellow"],
-  },
 };

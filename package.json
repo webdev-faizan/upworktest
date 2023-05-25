@@ -13,7 +13,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "storybook",
     "storybook": "storybook dev -p 6006",
     "build": "react-scripts build",
     "test": "react-scripts test",
