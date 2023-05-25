@@ -1,3 +1,4 @@
+import  { Meta, StoryObj } from '@storybook/react'
 import Link from "./atom/Link/Link";
 import Navbar from "./organisms/Navbar/Navbar";
 function App() {
