@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes, { string } from "prop-types";
-import "./Button.css";
+// import "./Button.css";
+import "./Button.scss";
 
 const Button = ({ variant, children, sizes, disabled }) => {
   return (

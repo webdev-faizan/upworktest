@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "../../atom/Link/Link";
 import Button from "../../atom/Button/Button";
-import "./Navigation.css";
+import "./Navigation.scss";
 
 const Navigation = () => {
   return (
