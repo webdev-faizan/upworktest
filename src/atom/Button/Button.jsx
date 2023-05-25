@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import PropTypes, { string } from "prop-types";
 import "./Button.css";
 
 const Button = ({ variant, children, sizes, disabled }) => {
@@ -10,9 +10,16 @@ const Button = ({ variant, children, sizes, disabled }) => {
   );
 };
 
-// Button.propTypes = {
-//   variant: PropTypes.oneOf(['primary', 'secondary', 'danger']).isRequired,
-//   children: PropTypes.node.isRequired,
-// };
+Button.propTypes = {
+  variant: PropTypes.oneOf(["primary", "secondary", "danger"]).isRequired,
+  children: PropTypes.node.isRequired,
+  sizes: PropTypes.string,
+  disabled: PropTypes.bool,
+};
+
+Button.defaultProps = {
+  sizes: "lg",
+  disabled: false,
+};
 
 export default Button;

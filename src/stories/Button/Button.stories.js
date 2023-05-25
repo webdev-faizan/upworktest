@@ -6,13 +6,16 @@ export default {
   title: "Button",
   component: Button,
   args: {
-    // variant: "danger Button",
-    disabled: false,
+    // disabled: false,
   },
+  parameters: {
+    controls: { expanded: true },
+  },
+
   argTypes: {
     variant: {
       control: "inline-radio",
-      options: ["danger Button", "primary Button", "Secondary Button"],
+      options: ["danger", "primary", "Secondary"],
     },
     disabled: {
       control: "boolean",
@@ -20,7 +23,7 @@ export default {
     },
 
     sizes: {
-      control: "inline-radio",
+      control: "select",
       options: ["sm", "md", "lg"],
     },
   },
