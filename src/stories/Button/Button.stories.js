@@ -1,26 +1,51 @@
-import React from "react";
 import Button from "../../atom/Button/Button";
 
-const ButtonTemplate = (args) => <Button {...args} />;
+import React from "react";
+
 export default {
-  title: "Components/Button",
+  title: "Button",
   component: Button,
+  args: {
+    // variant: "danger Button",
+    disabled: false,
+  },
   argTypes: {
-    backgroundColor: {
+    variant: {
       control: "inline-radio",
-      options: ["red", "yellow"],
+      options: ["danger Button", "primary Button", "Secondary Button"],
     },
-    scale: {
+    disabled: {
+      control: "boolean",
+      defaultValue: false,
+    },
+
+    sizes: {
       control: "inline-radio",
+      options: ["sm", "md", "lg"],
     },
   },
 };
 
-export const Primary = ButtonTemplate.bind({});
+const Template = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: "button",
-  size: "medium",
-  backgroundColor: "red",
-  children: "Hello Storybook",
+  variant: "primary Button",
+  children: "Primary Button",
+  sizes: "sm",
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  variant: "secondary Button",
+
+  children: "Secondary Button",
+  sizes: "md",
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  variant: "danger Button",
+  children: "Danger Button",
+  sizes: "lg",
 };
